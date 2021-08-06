@@ -1,6 +1,7 @@
 {
     "name": "archtechx/laravel-pages",
-    "description": "",
+    "description": "Easily add routes to your Laravel app by creating Markdown or Blade files.",
+    "keywords": ["laravel"],
     "type": "library",
     "license": "MIT",
     "authors": [
