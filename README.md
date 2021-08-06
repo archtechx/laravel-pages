@@ -2,7 +2,7 @@
 
 This package lets you create pages using Markdown or Blade without having to worry about creating routes or controllers yourself.
 
-Essentially, you create either `content/pages/foo.md` or `resources/views/pages/foo.blade.php`.
+Essentially, you create either `content/pages/foo.md` or `resources/views/pages/foo.blade.php` and the page will be accessible on the `/foo` route.
 
 Markdown files use a pre-defined Blade view to get rendered. Blade files are meant for pages which don't follow the default layout and need more custom styling.
 
