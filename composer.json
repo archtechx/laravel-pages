@@ -36,7 +36,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "ArchTech\\Pages\\PageServiceProvider"
+                "ArchTech\\Pages\\PagesServiceProvider"
             ]
         }
     }
