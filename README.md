@@ -78,7 +78,7 @@ The config file lets you change:
 - the view file used to render Markdown pages
 - routing details
 
-The layout is used *by* the vendor (package-provided) Markdown view. You'll likely want to set it to something like ``app-layout` or `layouts.app`.`
+The layout is used *by* the vendor (package-provided) Markdown view. You'll likely want to set it to something like `app-layout` or `layouts.app`.
 
 If you'd like to change the file that renders the Markdown itself, create `resources/views/pages/_markdown.blade.php` (the `_` prefix is important as it prevents direct visits) and change the `pages.views.markdown` config key to `pages._markdown`.
 
