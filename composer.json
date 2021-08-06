@@ -1,0 +1,42 @@
+{
+    "name": "archtechx/laravel-pages",
+    "description": "",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Samuel Štancl",
+            "email": "samuel@archte.ch"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "ArchTech\\Pages\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ArchTech\\Pages\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "^8.24",
+        "archtechx/laravel-seo": "^0.2.2",
+        "ryangjchandler/orbit": "^0.9.0",
+        "illuminate/routing": "^8.53",
+        "illuminate/database": "^8.53"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.9",
+        "pestphp/pest": "^1.2",
+        "pestphp/pest-plugin-laravel": "^1.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ArchTech\\Pages\\PackageServiceProvider"
+            ]
+        }
+    }
+}
