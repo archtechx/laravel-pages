@@ -19,6 +19,7 @@ class Page extends Model
     {
         $table->string('slug');
         $table->string('title');
+        $table->string('password')->nullable();
         $table->longText('content');
     }
 

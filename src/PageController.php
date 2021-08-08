@@ -21,6 +21,10 @@ class PageController
         }
 
         if ($model = config('pages.model')::find($page)) {
+            if ($model->password) {
+                abort_unless(request()->query('password') === $model->password, 403);
+            }
+
             seo()
                 ->title($model->title)
                 ->description(Str::limit($model->content, 100));

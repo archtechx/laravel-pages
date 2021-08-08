@@ -77,3 +77,16 @@ test('SEO metadata is set on markdown pages', function () {
         ->assertSee('<meta property="og:title" content="Test page" />', false)
         ->assertSee('<meta property="og:description" content="This is a test page" />', false);
 });
+
+test('pages can be password-protected', function () {
+    Page::create([
+        'slug' => 'test',
+        'title' => 'Test page',
+        'password' => 'foo',
+        'content' => 'This is a test page'
+    ]);
+
+    using($this)->get('/test')->assertForbidden();
+    using($this)->get('/test?password=bar')->assertForbidden();
+    using($this)->get('/test?password=foo')->assertSuccessful()->assertSee('This is a test page');
+});
