@@ -84,7 +84,7 @@ The layout is used *by* the vendor (package-provided) Markdown view. You'll like
 
 If you'd like to change the file that renders the Markdown itself, create `resources/views/pages/_markdown.blade.php` (the `_` prefix is important as it prevents direct visits) and change the `pages.views.markdown` config key to `pages._markdown`.
 
-And if you'd like to customize the routing logic more ethan the config file allows you, simply register the route yourself (instead of calling `Page::routes()`):
+And if you'd like to customize the routing logic more than the config file allows you, simply register the route yourself (instead of calling `Page::routes()`):
 
 ```php
 Route::get('/{page}', ArchTech\Pages\PageController::class);
