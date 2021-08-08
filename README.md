@@ -10,7 +10,7 @@ For instance, you could have the `/pricing` route use a Blade file (`pages/prici
 
 Whereas for `/about`, you could have a simple Markdown file (`content/pages/about.md`) that describes your service using pure text without any special graphical elements.
 
-We use this on the ArchTech website — the [About](https://archte.ch/about), [Careers](https://archte.ch/careers), and [Open source](https://archte.ch/open-source) pages are simple Markdown files.
+We use this on the ArchTech website — the [About](https://archte.ch/about), [Careers](https://archte.ch/careers), and [Open Source](https://archte.ch/open-source) pages are simple Markdown files.
 
 ## Installation
 
