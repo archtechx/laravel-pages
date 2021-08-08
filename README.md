@@ -34,6 +34,8 @@ ArchTech\Pages\Page::routes();
 
 This line will register the routes in a way that ensures that your routes take precedence, and the page route is only used as the final option.
 
+**Important: Before attempting to visit URLs managed by this package, make sure that you configure it to use the correct layout (see the section below). Otherwise you might get an error saying that the view cannot be found.**
+
 ## Usage
 
 ### Markdown pages
