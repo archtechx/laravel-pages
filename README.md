@@ -116,3 +116,18 @@ The package also uses another package of ours, [Laravel SEO](https://github.com/
 ```html
 <x-seo::meta />
 ```
+
+## Password-protected routes
+
+The package also lets you protect certain routes with passwords. To add a password to a page, simply specify the `password` key in the YAML front matter:
+
+```yaml
+password: 'foo'
+```
+
+Now if a user wants to visit the page, he will **have to** include `?password=foo` in the URL, otherwise he'll be presented with a 403 error.
+
+```diff
+- /about
++ /about?password=foo
+```
