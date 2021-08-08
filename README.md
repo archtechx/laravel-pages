@@ -34,6 +34,8 @@ ArchTech\Pages\Page::routes();
 
 This line will register the routes in a way that ensures that your routes take precedence, and the page route is only used as the final option.
 
+**Important: Before attempting to visit URLs managed by this package, make sure that you configure it to use the correct layout (see the section below). Otherwise you might get an error saying that the view cannot be found.**
+
 ## Usage
 
 ### Markdown pages
@@ -78,11 +80,11 @@ The config file lets you change:
 - the view file used to render Markdown pages
 - routing details
 
-The layout is used *by* the vendor (package-provided) Markdown view. You'll likely want to set it to something like ``app-layout` or `layouts.app`.`
+The layout is used *by* the vendor (package-provided) Markdown view. You'll likely want to set it to something like `app-layout` or `layouts.app`.
 
 If you'd like to change the file that renders the Markdown itself, create `resources/views/pages/_markdown.blade.php` (the `_` prefix is important as it prevents direct visits) and change the `pages.views.markdown` config key to `pages._markdown`.
 
-And if you'd like to customize the routing logic more ethan the config file allows you, simply register the route yourself (instead of calling `Page::routes()`):
+And if you'd like to customize the routing logic more than the config file allows you, simply register the route yourself (instead of calling `Page::routes()`):
 
 ```php
 Route::get('/{page}', ArchTech\Pages\PageController::class);
