@@ -12,6 +12,7 @@
 */
 
 use ArchTech\Pages\Tests\TestCase;
+use Pest\TestSuite;
 
 uses(ArchTech\Pages\Tests\TestCase::class)->in('Feature');
 
@@ -41,7 +42,7 @@ expect()->extend('toBeOne', function () {
 |
 */
 
-function using($test): TestCase
+function please(): TestCase
 {
-    return $test;
+    return TestSuite::getInstance()->test;
 }

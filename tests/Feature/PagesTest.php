@@ -28,7 +28,7 @@ test('markdown is rendered if it exists', function () {
         'content' => 'This is a **test page**'
     ]);
 
-    using($this)
+    please()
         ->get('/test')
         ->assertSee('Markdown page')
         ->assertSee('<strong>test page</strong>', false);
@@ -41,7 +41,7 @@ test('view takes precedence over markdown', function () {
         'content' => 'This is a test page'
     ]);
 
-    using($this)
+    please()
         ->get('/example')
         ->assertSee('Test view')
         ->assertDontSee('Test page');
@@ -60,7 +60,7 @@ test('a custom layout can be used', function () {
         'content' => 'This is a test page'
     ]);
 
-    using($this)
+    please()
         ->get('/test')
         ->assertSee('second layout');
 });
@@ -72,7 +72,7 @@ test('SEO metadata is set on markdown pages', function () {
         'content' => 'This is a test page'
     ]);
 
-    using($this)
+    please()
         ->get('/test')
         ->assertSee('<meta property="og:title" content="Test page" />', false)
         ->assertSee('<meta property="og:description" content="This is a test page" />', false);
@@ -86,7 +86,7 @@ test('pages can be password-protected', function () {
         'content' => 'This is a test page'
     ]);
 
-    using($this)->get('/test')->assertForbidden();
-    using($this)->get('/test?password=bar')->assertForbidden();
-    using($this)->get('/test?password=foo')->assertSuccessful()->assertSee('This is a test page');
+    please()->get('/test')->assertForbidden();
+    please()->get('/test?password=bar')->assertForbidden();
+    please()->get('/test?password=foo')->assertSuccessful()->assertSee('This is a test page');
 });
